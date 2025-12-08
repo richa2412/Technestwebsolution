@@ -1,0 +1,50 @@
+---
+// Imports
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<!-- Header -->
+	<Fragment slot="header">
+		<Header />
+	</Fragment>
+
+	<!-- Main Section (Coming Soon Page) -->
+	<!-- Main Section (Coming Soon Page) -->
+	<section
+		class="relative w-full min-h-screen flex items-center justify-center"
+	>
+		<!-- Background Pattern Image (FULL WIDTH FIXED) -->
+		<div class="absolute inset-0 w-full h-full">
+			<img
+				src="/img/magic_pattern_design.png"
+				alt="Background Pattern"
+				class="w-full h-full mt-0 lg:mt-20 object-cover"
+			/>
+		</div>
+
+		<!-- Smooth Dark Overlay -->
+		<div class="absolute inset-0"></div>
+
+		<!-- Center Content -->
+		<div class="relative z-10 text-center px-6 mt-10">
+			<!-- Rocket Icon -->
+			<div class="flex justify-center mb-6">
+				<img
+					src="/img/coming_soon.png"
+					alt="Rocket Icon"
+					class="h-24 w-24 md:h-32 md:w-32 object-contain"
+				/>
+			</div>
+
+			<!-- Heading -->
+			<h1
+				class="text-white text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg"
+			>
+				Coming Soon
+			</h1>
+
+		</div>
+	</section>
+</Layout>

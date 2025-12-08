@@ -1,0 +1,31 @@
+---
+import "../styles/global.css";
+const { title = "Technestwebsolution", description = "Technestwebsolution - Astro" } = Astro.props;
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/assets/img/dynhublogo.PNG" />
+  </head>
+
+  <body class="min-h-screen antialiased bg-[#FFF8ED] text-gray-800 w-full max-w-8xl">
+    <!-- Header Slot -->
+    <header>
+      <slot name="header" />
+    </header>
+
+    <!-- Main Slot -->
+    <main class="min-h-[70vh]">
+      <slot />
+    </main>
+
+    <!-- Footer Slot -->
+    <footer>
+      <slot name="footer" />
+    </footer>
+  </body>
+</html>
